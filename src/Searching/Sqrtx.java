@@ -12,7 +12,7 @@ public class Sqrtx {
         int start = 1;
         int end = x;
         int ans = 0;
-        while (start < end) {
+        while (start <= end) {
             int mid = start + (end - start) /2;
             if (mid <= x/mid) {
                 ans = mid;
