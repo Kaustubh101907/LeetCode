@@ -4,8 +4,8 @@ import java.util.*;
 
 public class IntersectionOfTwoArrays {
     public static void main(String[] args) {
-        int[] nums1 = {4,9,5};
-        int[] nums2 = {9,4,9,8,4};
+        int[] nums1 = {1,2,2,1};
+        int[] nums2 = {2,2};
         int[] ans = intersection(nums1, nums2);
         System.out.println(Arrays.toString(ans));
     }
