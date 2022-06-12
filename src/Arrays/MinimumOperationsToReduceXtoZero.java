@@ -2,8 +2,8 @@ package Arrays;
 
 public class MinimumOperationsToReduceXtoZero {
     public static void main(String[] args) {
-        int[] nums = {1,1};
-        int x = 3;
+        int[] nums = {2,3,1,1,1};
+        int x = 5;
         System.out.println(minOperations(nums, x));
     }
 
@@ -14,11 +14,18 @@ public class MinimumOperationsToReduceXtoZero {
         if (nums[start] == x || nums[end] == x) {
             return 1;
         }
+        int sum = 0;
+        for (int i = 0 ; i < nums.length ; i++) {
+            sum += nums[i];
+        }
+        if (sum < x) {
+            return -1;
+        }
+        if (x < nums[start] && x < nums[end]) {
+            return -1;
+        }
         while (x > 0 && start < end) {
-            if (x < nums[start] && x < nums[end]) {
-                return -1;
-            }
-            if (x > nums[start] && nums[start] > nums[end]) {
+            if ((x > nums[start]) && (nums[start] > nums[end])) {
                 x = x - nums[start];
                 start++;
             } else {
@@ -26,9 +33,6 @@ public class MinimumOperationsToReduceXtoZero {
                 end--;
             }
             count++;
-        }
-        if (start <= end) {
-            return -1;
         }
         return count;
     }
