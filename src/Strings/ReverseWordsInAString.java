@@ -1,6 +1,6 @@
 package Strings;
 
-// Que Link : https://leetcode.com/problems/reverse-words-in-a-string/
+// Que Link: https://leetcode.com/problems/reverse-words-in-a-string/
 
 public class ReverseWordsInAString {
     public static void main(String[] args) {
