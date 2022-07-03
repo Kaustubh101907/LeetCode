@@ -4,7 +4,7 @@ package Strings;
 
 public class ReverseWordsInAString {
     public static void main(String[] args) {
-        String s = "a good   example";
+        String s = "the sky is blue henna hai";
         System.out.println(reverseWords(s));
     }
 
@@ -28,18 +28,18 @@ public class ReverseWordsInAString {
             char x = str.charAt(i);
             if (x == ' ' || i == str.length() -1) {
                 ss += reverse(str, ind, i);
-                ind = i;
+                ind = i+1;
             }
         }
-        return ss;
+        return ss.substring(1,ss.length());
     }
 
     private static String reverse(String str, int ind, int i) {
         String s = "";
-        for (int j = i-1; j >= ind; j--) {
+        for (int j = i; j >= ind; j--) {
             s += str.charAt(j);
         }
-        s += ' ';
+//        s += ' ';
         return s;
     }
 }
