@@ -27,7 +27,7 @@ public class ReverseWordsInAString {
         for (int i = 0 ; i < str.length(); i++) {
             char x = str.charAt(i);
             if (x == ' ' || i == str.length() -1) {
-                ss += reverse(str, ind, i);
+                ss +=reverse(str, ind, i);
                 ind = i+1;
             }
         }

@@ -18,13 +18,11 @@ public class Candy {
                 ans[i+1] = ans[i] +1;
             }
         }
-        System.out.println(Arrays.toString(ans));
         for (int i = arr.length -1; i > 0; i--) {
             if (arr[i-1] > arr[i] && ans[i-1] <= ans[i]) {
                 ans[i-1] = ans[i] +1;
             }
         }
-        System.out.println(Arrays.toString(ans));
         int sum = 0;
         for (int i = 0 ; i < ans.length; i++) {
             sum += ans[i];
